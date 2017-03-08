@@ -4,7 +4,7 @@ Local settings for the HealthChecks app
 
 import os
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [os.getenv('HEALTHCHECKS_HOST')]
 DEBUG = os.getenv('HEALTHCHECKS_DEBUG', False)
 
 HOST = os.getenv('HEALTHCHECKS_HOST', "localhost")
